@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#071A21"
+    tools:context=".Inscricoes">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#071A21"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/cardview_default_elevation"
+            android:layout_marginTop="@dimen/cardview_default_elevation"
+            android:layout_marginEnd="@dimen/cardview_default_elevation"
+            android:layout_marginBottom="@dimen/cardview_default_elevation"
+            android:textColorHint="@color/white">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/cardview_default_elevation"
+                android:layout_marginTop="@dimen/cardview_default_elevation"
+                android:layout_marginEnd="@dimen/cardview_default_elevation"
+                android:layout_marginBottom="@dimen/cardview_default_elevation"
+                app:hintTextAppearance="@style/HintText" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Nome do jogador"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:contentDescription="Adicionar"
+                android:gravity="end"
+                app:srcCompat="@android:drawable/ic_menu_add" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+</ScrollView>
