@@ -1,15 +1,30 @@
+# Diretórios de compilação
+target/
+bin/
+out/
+
+# Arquivos de configuração do IDE
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+*.class
+
+# Arquivos de dependências do Maven
+*.jar
+*.war
+*.ear
+
+# Arquivos de logs
+*.log
+
+# Arquivos de ambiente
+.env
+
+# Outros arquivos temporários
+*.tmp
+*.temp
+*.bak
+*.swp
+*.DS_Store
+
+# Arquivos de configuração do sistema
+Thumbs.db
