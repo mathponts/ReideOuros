@@ -1,5 +1,5 @@
-# This workflow will build a Java project with Maven and package the JAR file
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+# Este fluxo de trabalho irá construir um projeto Java com Maven e empacotar o arquivo JAR
+# Para mais informações, veja: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
 
 name: Java CI with Maven
 
@@ -17,32 +17,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Fazer checkout do código
+        uses: actions/checkout@v2  # Usar a versão estável 2
 
-      - name: Set up JDK 8
-        uses: actions/setup-java@v2
+      - name: Configurar JDK 8
+        uses: actions/setup-java@v2  # Usar a versão estável 2
         with:
           java-version: '8'
           distribution: 'temurin'
           cache: maven
 
-      - name: Build with Maven
-        run: mvn clean package
+      - name: Construir com Maven
+        run: mvn clean package  # Constrói o arquivo JAR
 
-      - name: Run tests
-        run: mvn test
+      - name: Executar testes
+        run: mvn test  # Executa os testes
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build
+    needs: build  # Garantir que este trabalho execute após o trabalho de construção
     steps:
-      - name: Download JAR file
+      - name: Baixar arquivo JAR
         run: |
-          echo "The JAR file is located at: target/ReideOuros-1.0-SNAPSHOT.jar"
+          echo "O arquivo JAR está localizado em: target/ReideOuros-1.0-SNAPSHOT.jar"  # Ajustar de acordo com sua versão
+          # Opcionalmente, você pode copiar o arquivo JAR para um local diferente ou fazer o upload para um serviço específico
 
-      - name: Upload JAR file
-        uses: actions/upload-artifact@v2
+      - name: Fazer upload do arquivo JAR
+        uses: actions/upload-artifact@v3  # Atualizar para a versão 3
         with:
           name: ReideOuros-jar
-          path: target/ReideOuros-1.0-SNAPSHOT.jar
+          path: target/ReideOuros-1.0-SNAPSHOT.jar  # Especificar o caminho para o arquivo JAR
